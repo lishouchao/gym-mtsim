@@ -224,7 +224,7 @@ This is the Gym environment that works on top of the *MtSim*. Most of its public
 
 ### MtSim
 
-#### Create a simulator with custom parameters
+#### Create a simulator with custom parameters 自定义参数创建simulator
 
 ```python
 import pytz
@@ -252,7 +252,7 @@ if not sim.load_symbols(FOREX_DATA_PATH):
     sim.save_symbols(FOREX_DATA_PATH)
 ```
 
-#### Place some orders
+#### Place some orders 开仓
 
 ```python
 sim.current_time = datetime(2021, 8, 30, 0, 17, 52, tzinfo=pytz.UTC)
@@ -343,7 +343,7 @@ free_margin: 7342.1002526704615, margin_level: 3.1751271592500743
 </table>
 </div>
 
-#### Close all orders
+#### Close all orders  平掉所有头寸
 
 ```python
 order1_profit = sim.close_order(order1)
@@ -423,7 +423,7 @@ free_margin: 10717.58118589908, margin_level: inf
 
 ### MtEnv
 
-#### Create an environment
+#### Create an environment 创建Gym环境
 
 ```python
 import gym
@@ -441,8 +441,8 @@ env = gym.make('forex-hedge-v0')
 ```
 
 - This will create a default environment. There are eight default environments, but it is also possible to create environments with custom parameters.
-
-#### Create an environment with custom parameters
+- 将创建默认环境。定义了8个默认环境，同时也可以创建自定义参数的环境。
+#### Create an environment with custom parameters   创建自定义参数的环境
 
 ```python
 import pytz
@@ -498,7 +498,7 @@ env information:
 > features_shape: (10, 6)
 ```
 
-#### Trade randomly
+#### Trade randomly   随机交易
 
 ```python
 observation = env.reset()
@@ -523,7 +523,7 @@ free_margin: 6007.828863300409, margin_level: 2.6531785122131852
 step_reward: 140.93306243685583
 ```
 
-#### Render in *human* mode
+#### Render in *human* mode   渲染
 
 ```python
 state = env.render()
@@ -755,7 +755,7 @@ env.render('advanced_figure', time_format="%Y-%m-%d")
 
 ![png](file://D:\LSC\gym-mtsim\doc\output_30_0.png?msec=1691858403023)
 
-### A Complete Example using `stable-baselines`
+### A Complete Example using `stable-baselines`  使用Stable-baselines的完整示例
 
 ```python
 import gym
@@ -785,7 +785,7 @@ env.render('advanced_figure', time_format="%Y-%m-%d")
 
 ![png](file://D:\LSC\gym-mtsim\doc\output_32_0.png?msec=1691858403025)
 
-## References
+## References  参考
 
 - [https://www.mql5.com/en/docs/python_metatrader5](https://www.mql5.com/en/docs/python_metatrader5)
 - [https://www.metatrader5.com/en/terminal/help/trading_advanced/margin_forex](https://www.metatrader5.com/en/terminal/help/trading_advanced/margin_forex)
