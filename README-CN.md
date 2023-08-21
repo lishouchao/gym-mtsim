@@ -63,6 +63,50 @@ This package is required to run some examples. Install it from [here](https://gi
 This is a data class that contains the essential properties of a symbol. Try to get fully acquainted with [these properties](https://github.com/AminHP/gym-mtsim/blob/main/gym_mtsim/metatrader/symbol.py) in case they are unfamiliar. There are plenty of resources that provide good explanations.
 
 这是一个包含符号基本属性的数据类。尝试完全熟悉[这些属性]，以防它们不熟悉。有很多资源可以提供很好的解释。
+根据给出的代码，SymbolInfo是一个自定义的类，用于封装MtSymbolInfo对象的一些属性和方法。它具有以下属性：
+name（str）：交易符号的名称。
+market（str）：交易符号所属的市场类型。
+currency_margin（str）：交易保证金使用的货币。
+currency_profit（str）：交易利润使用的货币。
+currencies（Tuple[str, …]）：交易涉及的货币列表。
+trade_contract_size（float）：交易合约大小。
+margin_rate（float）：交易保证金率。注意，该值在MtSymbolInfo中没有提供，默认为1.0。
+volume_min（float）：交易最小交易量。
+volume_max（float）：交易最大交易量。
+volume_step（float）：交易交易量步长。
+除了上述属性，SymbolInfo类还定义了__str__()方法，用于返回交易市场和交易符号的组合的字符串表示。
+
+SymbolInfo类通过封装MtSymbolInfo对象的属性，提供了一个更易于使用和理解的界面来访问和操作交易符号的信息。它使得处理交易符号的详细信息更加方便和直观。
+
+MtSymbolInfo是MetaTrader5库中的一个类，用于表示交易符号的详细信息。它包含了交易符号的各种属性和参数。
+根据MetaTrader5库的文档，MtSymbolInfo类具有以下属性：
+name：交易符号的名称。
+path：交易符号的路径。
+description：交易符号的描述信息。
+currency_base：交易符号的基础货币。
+currency_profit：交易符号的利润货币。
+currency_margin：交易符号的保证金货币。
+digits：交易符号的价格小数位数。
+trade_contract_size：交易合约的大小。
+trade_mode：交易模式（例如，TRADE_MODE_FOREX，TRADE_MODE_CFD等）。
+volume_min：最小交易量。
+volume_max：最大交易量。
+volume_step：交易量的步长。
+volume_limit：交易量的限制。
+swap_long：多头持仓的过夜利息。
+swap_short：空头持仓的过夜利息。
+margin_initial：初始保证金要求。
+margin_maintenance：维持保证金要求。
+margin_long：多头持仓的保证金要求。
+margin_short：空头持仓的保证金要求。
+margin_limit：保证金限制。
+margin_stop：停止保证金要求。
+tick_size：价格变动的最小单位。
+tick_value：每个价格变动的价值。
+tick_flags：价格标志。
+expiration_mode：过期模式（例如，EXPIRATION_MODE_EXPIRATION，EXPIRATION_MODE_SPECIFIED等）。
+time：交易符号的时间戳。
+MtSymbolInfo类提供了访问和操作交易符号详细信息的方法。通过使用这些属性，您可以获取交易符号的各种参数和属性，以便于进行相关的金融交易操作。
 
 ### 2. Order
 
