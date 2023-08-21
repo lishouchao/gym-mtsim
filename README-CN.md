@@ -64,11 +64,11 @@ This is a data class that contains the essential properties of a symbol. Try to 
 
 这是一个包含符号基本属性的数据类。尝试完全熟悉[这些属性]，以防它们不熟悉。有很多资源可以提供很好的解释。
 根据给出的代码，SymbolInfo是一个自定义的类，用于封装MtSymbolInfo对象的一些属性和方法。它具有以下属性：
-name（str）：交易符号的名称。
-market（str）：交易符号所属的市场类型。
-currency_margin（str）：交易保证金使用的货币。
-currency_profit（str）：交易利润使用的货币。
-currencies（Tuple[str, …]）：交易涉及的货币列表。
+name（str）：交易符号的名称。  
+market（str）：交易符号所属的市场类型。  
+currency_margin（str）：交易保证金使用的货币。  
+currency_profit（str）：交易利润使用的货币。  
+currencies（Tuple[str, …]）：交易涉及的货币列表。  
 trade_contract_size（float）：交易合约大小。
 margin_rate（float）：交易保证金率。注意，该值在MtSymbolInfo中没有提供，默认为1.0。
 volume_min（float）：交易最小交易量。
